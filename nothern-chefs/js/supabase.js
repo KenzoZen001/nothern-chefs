@@ -1,6 +1,6 @@
 // js/supabase.js
-const SUPABASE_URL = 'https://your-supabase-url.supabase.co';
-const SUPABASE_ANON_KEY = 'your-supabase-anon-key';
+const SUPABASE_URL = 'https://nmivtkovpygylpyaeqju.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5taXZ0a292cHlneWxweWFlcWp1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2MjE0NDMsImV4cCI6MjA2MzE5NzQ0M30.kjv866JZXCIfm--b1edi2DYsdisVqjfRaWjOe3tkZmw';
 
 // Initialize the Supabase client
 const supabase = supabaseClient.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
