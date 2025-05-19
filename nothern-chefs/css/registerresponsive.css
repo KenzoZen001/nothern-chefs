@@ -1,0 +1,157 @@
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .container {
+      padding: 120px 30px 60px;
+    }
+    
+    .footer-container {
+      padding: 0 30px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .footer-container {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    
+    .footer-left, .footer-center, .footer-right {
+      align-items: center;
+      text-align: center;
+    }
+    
+    .contact-info {
+      text-align: center;
+    }
+    
+    .login-container {
+      flex-direction: column;
+    }
+    
+    .login-left {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+    
+    .mobile-menu-toggle {
+      display: flex;
+    }
+    
+    .logo {
+      margin-left: 0;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .form-container {
+      padding: 30px 20px;
+    }
+    
+    .form-row {
+      grid-template-columns: 1fr;
+      flex-direction: column;
+    }
+    
+    .social-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .form-header h2 {
+      font-size: 2em;
+    }
+    
+    .step-label {
+      font-size: 0.8em;
+    }
+    
+    .progress-steps::before {
+      top: 18px;
+    }
+    
+    .user-actions {
+      margin-right: 40px;
+      display: none;
+    }
+    
+    .user-actions a:not(.cart-link):not(.user-link) {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .form-container, .login-right {
+      padding: 25px 15px;
+    }
+    
+    .checkbox-group {
+      grid-template-columns: 1fr;
+    }
+    
+    .form-buttons {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .prev-btn, .next-btn, #register-btn {
+      width: 100%;
+    }
+    
+    .step-number {
+      width: 35px;
+      height: 35px;
+      font-size: 0.9em;
+    }
+    
+    .progress-steps::before {
+      top: 16px;
+    }
+    
+    .form-header h2 {
+      font-size: 1.8em;
+    }
+    
+    .form-header p {
+      font-size: 0.9em;
+    }
+    
+    .notification {
+      width: calc(100% - 40px);
+      left: 20px;
+      right: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .step-label {
+      font-size: 0.7em;
+    }
+    
+    .social-signup p {
+      font-size: 0.9em;
+    }
+    
+    .login-link {
+      font-size: 0.9em;
+    }
+    
+    .terms label {
+      font-size: 0.85em;
+    }
+  }
+  
+  @media (max-width: 380px) {
+    .step-label {
+      display: none;
+    }
+    
+    .progress-steps::before {
+      top: 20px;
+    }
+  }
