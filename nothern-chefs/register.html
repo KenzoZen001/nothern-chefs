@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Northern Chefs</title>
+    <!-- CSS files -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header and navigation -->
+    <header>
+        <!-- Your header content -->
+    </header>
+
+    <main class="registration-container">
+        <div class="registration-card">
+            <div class="registration-header">
+                <h1>Create an Account</h1>
+                <p>Join Northern Chefs to order delicious meals and enjoy exclusive benefits.</p>
+            </div>
+
+            <div class="registration-progress">
+                <div class="steps">
+                    <div class="step active">1</div>
+                    <div class="step">2</div>
+                    <div class="step">3</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <div id="error-message" class="error-message" style="display: none;">
+                <i class="fas fa-exclamation-circle"></i>
+                <p></p>
+            </div>
+
+            <form id="registration-form" class="registration-form">
+                <!-- Step 1: Personal Information -->
+                <div class="form-step active">
+                    <h2>Personal Information</h2>
+                    
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="button" id="step1-next" class="btn primary-btn">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 2: Password -->
+                <div class="form-step">
+                    <h2>Create Password</h2>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="password-input-container">
+                            <input type="password" id="password" name="password" required>
+                            <i class="toggle-password fas fa-eye"></i>
+                        </div>
+                        
+                        <div class="password-strength">
+                            <div class="strength-bar-container">
+                                <div class="strength-bar"></div>
+                            </div>
+                            <span class="strength-text">Password strength</span>
+                        </div>
+                        
+                        <div class="password-requirements">
+                            <p>Your password must:</p>
+                            <ul>
+                                <li class="requirement"><i class="fas fa-times-circle"></i> Be at least 8 characters long</li>
+                                <li class="requirement"><i class="fas fa-times-circle"></i> Include at least one uppercase letter</li>
+                                <li class="requirement"><i class="fas fa-times-circle"></i> Include at least one lowercase letter</li>
+                                <li class="requirement"><i class="fas fa-times-circle"></i> Include at least one number</li>
+                                <li class="requirement"><i class="fas fa-times-circle"></i> Include at least one special character</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <div class="password-input-container">
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            <i class="toggle-password fas fa-eye"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="button" id="step2-prev" class="btn secondary-btn">Back</button>
+                        <button type="button" id="step2-next" class="btn primary-btn">Next</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Preferences -->
+                <div class="form-step">
+                    <h2>Preferences</h2>
+                    
+                    <div class="form-group">
+                        <label>What are your favorite products? (Optional)</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="favorites[]" value="pastil">
+                                <span>Pastil</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="favorites[]" value="laing">
+                                <span>Laing</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="favorites[]" value="bangus">
+                                <span>Spanish Bangus</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="favorites[]" value="chili">
+                                <span>Chili Garlic</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="referral">How did you hear about us? (Optional)</label>
+                        <select id="referral" name="referral">
+                            <option value="">Select an option</option>
+                            <option value="social">Social Media</option>
+                            <option value="friend">Friend or Family</option>
+                            <option value="search">Search Engine</option>
+                            <option value="ad">Advertisement</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-label terms-label">
+                            <input type="checkbox" id="termsCheckbox" name="terms" required>
+                            <span>I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="button" id="step3-prev" class="btn secondary-btn">Back</button>
+                        <button type="submit" id="register-btn" class="btn primary-btn">Create Account</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="auth-redirect">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Your footer content -->
+    </footer>
+
+    <!-- Scripts -->
+    <!-- First load Supabase from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- Then load your custom scripts -->
+    <script src="js/supabase.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/registration.js"></script>
+</body>
+</html>
